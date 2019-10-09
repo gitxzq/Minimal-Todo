@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
 def releaseTime() {
-    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+    return new Date().getTime()
 }
 
 android {
@@ -33,12 +33,7 @@ android {
     lintOptions {
         abortOnError false
     }
-//    productFlavors{
-//        develop{}
-//        xiaomi{}
-//        huawei{}
-//        anzhi{}
-//    }
+
     android.applicationVariants.all { variant ->
         variant.outputs.all { output ->
             def outputFile = output.outputFile
