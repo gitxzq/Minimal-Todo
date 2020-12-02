@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Minimal-Todo-master.iml" filepath="$PROJECT_DIR$/Minimal-Todo-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Minimal-Todo.iml" filepath="$PROJECT_DIR$/.idea/modules/Minimal-Todo.iml" group="Minimal-Todo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Minimal-Todo-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Minimal-Todo-app.iml" group="Minimal-Todo/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

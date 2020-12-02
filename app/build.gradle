@@ -14,12 +14,12 @@ android {
             storePassword ''
         }
     }
-    compileSdkVersion 23
+    compileSdkVersion 28
     buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.test.minimaltodo"
         minSdkVersion 16
-        targetSdkVersion 23
+        targetSdkVersion 28
         versionCode 3
         versionName "1.2"
     }
