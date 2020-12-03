@@ -6,12 +6,26 @@ def releaseTime() {
 }
 
 android {
+    Properties properties=new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    def sdkDir=properties.getProperty('key.file')
+
+    def keyfile=file(sdkDir)
+    def key_keyAlias=properties.getProperty('keyAlias')
+    def key_keyPassword=properties.getProperty('keyPassword')
+    def key_storePassword=properties.getProperty('storePassword')
     signingConfigs {
         release {
-            keyAlias ''
-            keyPassword ''
-            storeFile file('/Users/avjindersinghsekhon/androidapps.jks')
-            storePassword ''
+            keyAlias key_keyAlias
+            keyPassword key_keyPassword
+            storeFile keyfile
+            storePassword key_storePassword
+        }
+        debug {
+            keyAlias key_keyAlias
+            keyPassword key_keyPassword
+            storeFile keyfile
+            storePassword key_storePassword
         }
     }
     compileSdkVersion 28
@@ -26,6 +40,10 @@ android {
     buildTypes {
         release {
             minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
